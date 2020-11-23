@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="stylesheet/skeleton.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="icon" href="icons/fav.png">
+    <title>Alpha</title>
+    <script>
+        function Cure(){
+            window.location = "Cure.html"
+        } 
+
+        async function Toxic(){
+            return_val = await eel.chromeController()();
+            console.log(return_val)
+        } 
+
+        function Home(){
+            window.location = "index.html"
+        }
+    </script>
+    <style>
+        body{
+            background-color: black;
+            color: #CBB471;
+            
+        }
+        .example::-webkit-scrollbar{
+            display: none;
+            
+        }
+        .example {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        h1 {
+            text-align: center;
+            letter-spacing: 60px;
+        }
+        .column{
+            text-align: center;
+            
+        }
+        #Alpha {
+            min-width: 10px;
+            min-height: 10px;
+            max-width: 180px;
+            max-height: 180px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .button {
+            color: #CBB471;
+            width: 67%;
+        }
+    </style>
+</head>
+<body class="example">
+    <div class="container">
+        <a onclick="Home()"><img id="Alpha" src="icons/Alpha.jpg" alt=""></a>
+        <h1>ALPHA</h1>
+
+        <div class="row">
+            <div class="column"><a class="button" id="Cure" onclick="Cure()">Cure</a></div>
+        </div>
+        <div class="row">
+            <div class="column"><a class="button" onclick="Toxic()">Toxic</a></div>
+        </div>
+        <div class="row"> 
+            <div class="column"><a class="button" onclick="Cure()">Venom</a></div>
+          </div>
+    </div>
+    
+</body>
+</html>

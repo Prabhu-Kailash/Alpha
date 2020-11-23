@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet/skeleton.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="icon" href="icons/fav.png">
+    <title>Alpha</title>
+    <script>
+
+        function Home(){
+            window.location = "index.html"
+        }
+    </script>
+    <style>
+        body{
+            background-color: black;
+            color: #CBB471;
+        }
+        .alert {
+            display: block;
+            padding: 20px;
+            border-left: 5px solid;
+        }
+
+        .alert-success {
+            background-color: black;
+            border-left-color: black;
+            color: #CBB471;
+            height: 25px;
+            text-align: center;
+        }
+
+        .alert-error {
+            background-color: black;
+            border-left-color: black;
+            color: #CBB471;
+            height: 25px;
+            text-align: center;
+        }
+        .button{
+            color: #CBB471 !important;
+            width: 67%;
+        }
+        .example::-webkit-scrollbar{
+            display: none;
+            
+        }
+        .Bcolumn {
+            text-align: center;
+        }
+        .example {
+
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        #Alpha {
+            min-width: 10px;
+            min-height: 10px;
+            max-width: 110px;
+            max-height: 110px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 15px;
+        }
+        
+    </style>
+</head>
+<body class="example">
+    <div class="container">
+        <a onclick="Home()"><img id="Alpha" src="icons/Alpha.jpg" alt=""></a>
+        <div class="row">
+            <div class="twelve columns" id="alert"></div>
+        </div>
+        <form id="form">
+            <div class="row">
+              <div class="four columns"><label for="Producer">Main Producer *</label></div>
+              <div class="eight columns"><input class="u-full-width" type="text" placeholder="Producer name here" id="Producer" required></div>
+            </div>
+
+            <div class="row">
+                <div class="two columns"><label for="SProducer">2nd Producer</label></div>
+                <div class="three columns"><input class="u-full-width" type="text" placeholder="Producer name" id="SProducer"></div>
+                <div class="two columns"><label for="Consumer">Main Consumer *</label></div>
+                <div class="three columns"><input class="u-full-width" type="text" placeholder="Consumer name" id="Consumer" required></div>
+                <label class="example-send-yourself-copy two columns" style="padding-top: 10px;">
+                    <input type="checkbox" id="Hold">
+                    <span class="label-body">Hold</span>
+                </label>
+            </div>
+
+            <div class="row">
+                <div class="two columns"><label for="UpdateSSH">Update SSH</label></div>
+                <div class="four columns"><input class="u-full-width" type="text" placeholder="SSH ID here" id="UpdateSSH"></div>
+                <div class="two columns"><label for="UpdateDir">Update Dir</label></div>
+                <div class="four columns"><input class="u-full-width" type="text" placeholder="Dir Path" id="UpdateDir"></div>
+            
+            </div>
+
+            <div class="row">
+                <div class="one columns"><label for="DetailEmail">Detail</label></div>
+                <div class="three columns"><input class="u-full-width" type="text" placeholder="Add email" id="DetailEmail"></div>
+                <div class="one columns"><label for="SuccessEmail">Success</label></div>
+                <div class="three columns"><input class="u-full-width" type="text" placeholder="Add email" id="SuccessEmail"></div>
+                <div class="one columns"><label for="FailEmail">Fail</label></div>
+                <div class="three columns"><input class="u-full-width" type="text" placeholder="Add Email" id="FailEmail"></div>
+            </div>
+
+            <div class="row">
+                <div class="one column"><label for="RDetailEmail">Detail</label></div>
+                <div class="three columns"><input class="u-full-width" type="text" placeholder="Remove email" id="RDetailEmail"></div>
+                <div class="one column"><label for="RSuccessEmail">Success</label></div>
+                <div class="three columns"><input class="u-full-width" type="text" placeholder="Remove email" id="RSuccessEmail"></div>
+                <div class="one column"><label for="RFailEmail">Fail</label></div>
+                <div class="three columns"><input class="u-full-width" type="text" placeholder="Remove Email" id="RFailEmail"></div>
+            </div>
+            <div class="row">
+                <div class="one column"><label for="RCUpdate">Update RC</label></div>
+                <div class="five columns"><select class="u-full-width" id="RCUpdate">
+                  <option value="" selected>None</option>
+                  <option value="LFG_Generic_Static_Routing_1">LFG_Generic_Static_Routing_1</option>
+                  <option value="LFG_Generic_Static_Route_PGP_Decrypt_Any_1">LFG_Generic_Static_Route_PGP_Decrypt_Any_1</option>
+                  <option value="LFG_Generic_Static_Routing_Secondary_MBX_1">LFG_Generic_Static_Routing_Secondary_MBX_1</option>
+                  <option value="LFG_Generic_Static_Routing_Secondary_MBX_2">LFG_Generic_Static_Routing_Secondary_MBX_2</option>
+                  <option value="LFG_Generic_Static_Encrypt_Sign_No_PGP_Ext_1">LFG_Generic_Static_Encrypt_Sign_No_PGP_Ext_1</option>
+                  <option value="LFG_Generic_Static_Route_OB_Pull_Encrypt">LFG_Generic_Static_Route_OB_Pull_Encrypt</option>
+                  <option value="LFG_Generic_Static_Route_OB_Pull_Encrypt_Sign">LFG_Generic_Static_Route_OB_Pull_Encrypt_Sign</option>
+                  <option value="LFG_Generic_Static_Routing">LFG_Generic_Static_Routing</option>
+                  <option value="LFG_Generic_Static_Route_1">LFG_Generic_Static_Route_1</option>
+                  <option value="LFG_Generic_Static_Routing_Outbound_Pull">LFG_Generic_Static_Routing_Outbound_Pull</option>
+                  <option value="LFG_Generic_Static_Routing_PGP_Decrypt_1">LFG_Generic_Static_Routing_PGP_Decrypt_1</option>
+                  <option value="LFG_Generic_Static_Routing_PGP_Encrypt_Sign_1">LFG_Generic_Static_Routing_PGP_Encrypt_Sign_1</option>
+                  <option value="LFG_Generic_Static_Routing_PGP_Encryption">LFG_Generic_Static_Routing_PGP_Encryption</option>
+                  <option value="LFG_Generic_Static_Routing_PGP_Encryption_1">LFG_Generic_Static_Routing_PGP_Encryption_1</option>
+                  <option value="LFG_Static_P2C_PGP_Encrypt_Secondary_MBX">LFG_Static_P2C_PGP_Encrypt_Secondary_MBX</option>
+                  <option value="LFG_Static_P2C_PGP_Encrypt_Sign_Secondary_MBX">LFG_Static_P2C_PGP_Encrypt_Sign_Secondary_MBX</option>
+                  <option value="LFG_Static_P2C_Secondary_MBX">LFG_Static_P2C_Secondary_MBX</option>
+                  <option value="LFG_Static_PGP_Encrypt_Secondary_MBX">LFG_Static_PGP_Encrypt_Secondary_MBX</option>
+                  <option value="LFG_Static_PGP_Encrypt_Sign_Secondary_MBX">LFG_Static_PGP_Encrypt_Sign_Secondary_MBX</option>
+                </select></div>
+                <div class="one columns"><label for="Auth">Update Auth</label></div>
+                <div class="three columns"><input class="u-full-width" type="text" placeholder="Key Name" id="Auth"></div>
+                <label class="example-send-yourself-copy two columns" style="padding-top: 10px;">
+                    <input type="checkbox" id="AuthCheck">
+                    <span class="label-body">Just Remove</span>
+                </label>
+            </div>
+            
+            <div class="row">
+                <div class="one column"><label for="PGP">Add PGP</label></div>
+                <div class="two columns"><input class="u-full-width" type="text" placeholder="PGP Key name" id="PGP"></div>
+                <div class="one column"><label for="Signing">Add Sign</label></div>
+                <div class="two columns"><select class="u-full-width" id="Signing">
+                    <option value="" selected>None</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select></div>
+                <div class="one column"><label for="RPGP">Remove PGP</label></div>
+                <div class="two columns"><select class="u-full-width" id="RPGP">
+                    <option value="" selected>None</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select></div>
+                <div class="one column"><label for="RSigning">Remove Sign</label></div>
+                <div class="two columns"><select class="u-full-width" id="RSigning">
+                    <option value="" selected>None</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select></div>
+
+                <div class="row">
+                    <div class="three columns"><label for="RConsumer">Remove Consumer</label></div>
+                    <div class="three columns"><select class="u-full-width" id="RConsumer">
+                    <option value="" selected>None</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    </select></div>
+                    <div class="three columns"><label for="RProducer">Remove Producer</label></div>
+                    <div class="three columns"><select class="u-full-width" id="RProducer">
+                        <option value="" selected>None</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select></div>
+                </div>
+                <div class="row">
+                    <div class="one column"><label for="Env">Env</label></div>
+                    <div class="two columns">
+                        <select class="u-full-width" id="Env">
+                            <option value="Prod" selected>Prod</option>
+                            <option value="PreProd">PreProd</option>
+                        </select>
+                    </div>
+                    <div class="three columns"><label for="UpdateFileRename">Update FileRename</label></div>
+                    <div class="three columns"><input class="u-full-width" type="text" placeholder="File Rename Pattern" id="UpdateFileRename"></div>
+                    <label class="example-send-yourself-copy three columns" style="padding-top: 10px;">
+                        <input type="checkbox" id="FileRenameCheck">
+                        <span class="label-body">Just Remove</span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="Bcolumn"><input class="button" type="submit" value="Antidote"></div>
+            </div>
+        </form>
+        
+    </div>
+    <script src="Cure.js"></script>
+</body>
+</html>
