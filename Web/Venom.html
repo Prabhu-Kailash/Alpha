@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet/skeleton.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="icon" href="icons/fav.png">
+    <title>Alpha</title>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        function Home(){
+            window.location = "index.html"
+        }
+    </script>
+    <style>
+        body{
+            background-color: black;
+            color: #CBB471;
+        }
+        .alert {
+            display: block;
+            padding: 20px;
+            border-left: 5px solid;
+        }
+
+        .alert-success {
+            background-color: black;
+            border-left-color: black;
+            color: #CBB471;
+            height: 25px;
+            text-align: center;
+        }
+
+        .alert-error {
+            background-color: black;
+            border-left-color: black;
+            color: #CBB471;
+            height: 25px;
+            text-align: center;
+        }
+        .button{
+            color: #CBB471 !important;
+            width: 67%;
+        }
+        .example::-webkit-scrollbar{
+            display: none;
+            
+        }
+        .Bcolumn {
+            text-align: center;
+        }
+        .example {
+
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        #Alpha {
+            min-width: 10px;
+            min-height: 10px;
+            max-width: 110px;
+            max-height: 110px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 15px;
+        }
+        
+        table{
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body class="example">
+    <div class="container">
+        <a onclick="Home()"><img id="Alpha" src="icons/Alpha.jpg" alt=""></a>
+        
+        <form id="form">
+            <div class="twelve columns">
+                <div class="three columns"><label for="jsonPath">Path to files</label></div>
+                <div class="six columns"><input class="u-full-width" type="text" placeholder="Path where all files exist" id="jsonPath"></div>
+                <div class="one column"><label for="Env">Env</label></div>
+                    <div class="two columns">
+                        <select class="u-full-width" id="Env">
+                            <option value="prod" selected>Prod</option>
+                            <option value="nonprod">PreProd</option>
+                        </select>
+                    </div>
+              </div>
+
+              <div class="row">
+                <div class="twelve columns" id="output"></div>
+            </div>
+            <div class="row">
+                <div class="Bcolumn"><input class="button" type="submit" value="Start Rattling!"></div>
+            </div>
+        </form> 
+    </div>
+    <script src="Venom.js"></script>
+</body>
+</html>

@@ -4,15 +4,23 @@
     <link rel="stylesheet" href="stylesheet/skeleton.css">
     <script type="text/javascript" src="/eel.js"></script>
     <link rel="icon" href="icons/fav.png">
-    <title>Alpha</title>
+    <title>A L P H A</title>
     <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
         function Cure(){
             window.location = "Cure.html"
         } 
 
-        async function Toxic(){
-            return_val = await eel.chromeController()();
-            console.log(return_val)
+        function Toxic(){
+            window.location = "Toxic.html"
+        } 
+
+        async function Venom(){
+            window.location = "Venom.html"
+            
+            
+            
         } 
 
         function Home(){
@@ -25,6 +33,7 @@
             color: #CBB471;
             
         }
+
         .example::-webkit-scrollbar{
             display: none;
             
@@ -32,10 +41,6 @@
         .example {
             -ms-overflow-style: none;
             scrollbar-width: none;
-        }
-        h1 {
-            text-align: center;
-            letter-spacing: 60px;
         }
         .column{
             text-align: center;
@@ -59,7 +64,10 @@
 <body class="example">
     <div class="container">
         <a onclick="Home()"><img id="Alpha" src="icons/Alpha.jpg" alt=""></a>
-        <h1>ALPHA</h1>
+        <div class="row">
+            <div class="column"><h1>A L P H A</h1></div>
+        </div>
+        
 
         <div class="row">
             <div class="column"><a class="button" id="Cure" onclick="Cure()">Cure</a></div>
@@ -68,7 +76,7 @@
             <div class="column"><a class="button" onclick="Toxic()">Toxic</a></div>
         </div>
         <div class="row"> 
-            <div class="column"><a class="button" onclick="Cure()">Venom</a></div>
+            <div class="column"><a class="button" onclick="Venom()">Venom</a></div>
           </div>
     </div>
     
