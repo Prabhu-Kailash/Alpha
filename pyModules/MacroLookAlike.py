@@ -14,7 +14,7 @@ class RoadRunner:
     def __init__(self, path):
         self.path = path
         self.__chrome_options = Options()
-        self.__Chrome = "\\\\us.ad.lfg.com\\dfs-dept\\ISVSystems\\GIS\\L1_Team\\Selenium Automation\\chromedriver.exe"
+        self.__Chrome = "\\\\pathto\\GIS\\L1_Team\\Selenium Automation\\chromedriver.exe"
         self.__chrome_options.add_experimental_option(
             "debuggerAddress", "127.0.0.1:9222")
         self._driver = webdriver.Chrome(
