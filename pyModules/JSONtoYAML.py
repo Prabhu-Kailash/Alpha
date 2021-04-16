@@ -158,77 +158,77 @@ class customExtensions(Yaml):
         if self.jsonData["RemoveFailEmail"] != "" and self.jsonData["HoldSetup"] == "False":
             if self.findConsumer >= 0:
                 try:
-                    failEmails = self.protocol['LFGSFTPDelivery_SFTPFailEmailId'].split(" ")
+                    failEmails = self.protocol['SFTPDelivery_SFTPFailEmailId'].split(" ")
                 except KeyError:
-                    self.protocol['LFGSFTPDelivery_SFTPFailEmailId'] = ""
+                    self.protocol['SFTPDelivery_SFTPFailEmailId'] = ""
                     failEmails = []
                 outEmail = self.removeEmail(failEmails, "RemoveFailEmail")
-                self.protocol['LFGSFTPDelivery_SFTPFailEmailId'] = outEmail
+                self.protocol['SFTPDelivery_SFTPFailEmailId'] = outEmail
 
         if self.jsonData["AddFailEmail"] != "" and self.jsonData["HoldSetup"] == "False":
             if self.findConsumer >= 0:
                 try:
-                    failEmails = self.protocol['LFGSFTPDelivery_SFTPFailEmailId'].split(" ")
+                    failEmails = self.protocol['SFTPDelivery_SFTPFailEmailId'].split(" ")
                 except KeyError:
-                    self.protocol['LFGSFTPDelivery_SFTPFailEmailId'] = ""
+                    self.protocol['SFTPDelivery_SFTPFailEmailId'] = ""
                     failEmails = []
                 outEmail = self.addEmail(failEmails, "AddFailEmail")
-                self.protocol['LFGSFTPDelivery_SFTPFailEmailId'] = outEmail
+                self.protocol['SFTPDelivery_SFTPFailEmailId'] = outEmail
 
         if self.jsonData["AddDetailEmail"] != "" and self.jsonData["HoldSetup"] == "False":
             if self.findConsumer >= 0:
                 try:
-                    detailEmails = self.protocol['LFGSFTPDelivery_SFTPEmailId'].split(" ")
+                    detailEmails = self.protocol['SFTPDelivery_SFTPEmailId'].split(" ")
                 except KeyError:
-                    self.protocol['LFGSFTPDelivery_SFTPEmailId'] = ""
+                    self.protocol['SFTPDelivery_SFTPEmailId'] = ""
                     detailEmails = []
                 outEmail = self.addEmail(detailEmails, "AddDetailEmail")
-                self.protocol['LFGSFTPDelivery_SFTPEmailId'] = outEmail
+                self.protocol['SFTPDelivery_SFTPEmailId'] = outEmail
 
         if self.jsonData["RemoveDetailEmail"] != "" and self.jsonData["HoldSetup"] == "False":
             if self.findConsumer >= 0:
                 try:
-                    detailEmails = self.protocol['LFGSFTPDelivery_SFTPEmailId'].split(" ")
+                    detailEmails = self.protocol['SFTPDelivery_SFTPEmailId'].split(" ")
                 except KeyError:
-                    self.protocol['LFGSFTPDelivery_SFTPEmailId'] = ""
+                    self.protocol['SFTPDelivery_SFTPEmailId'] = ""
                     detailEmails = []
                 outEmail = self.removeEmail(detailEmails, "RemoveDetailEmail")
-                self.protocol['LFGSFTPDelivery_SFTPEmailId'] = outEmail
+                self.protocol['SFTPDelivery_SFTPEmailId'] = outEmail
 
         if self.jsonData["AddSuccessEmail"] != "" and self.jsonData["HoldSetup"] == "False":
             if self.findConsumer >= 0:
                 try:
-                    successEmails = self.protocol['LFGSFTPDelivery_SFTPEmailIdSh'].split(" ")
+                    successEmails = self.protocol['SFTPDelivery_SFTPEmailIdSh'].split(" ")
                 except KeyError:
-                    self.protocol['LFGSFTPDelivery_SFTPEmailIdSh'] = ""
+                    self.protocol['SFTPDelivery_SFTPEmailIdSh'] = ""
                     successEmails = []
                 outEmail = self.addEmail(successEmails, "AddSuccessEmail")
-                self.protocol['LFGSFTPDelivery_SFTPEmailIdSh'] = outEmail
+                self.protocol['SFTPDelivery_SFTPEmailIdSh'] = outEmail
 
         if self.jsonData["RemoveSuccessEmail"] != "" and self.jsonData["HoldSetup"] == "False":
             if self.findConsumer >= 0:
                 try:
-                    successEmails = self.protocol['LFGSFTPDelivery_SFTPEmailIdSh'].split(" ")
+                    successEmails = self.protocol['SFTPDelivery_SFTPEmailIdSh'].split(" ")
                 except KeyError:
-                    self.protocol['LFGSFTPDelivery_SFTPEmailIdSh'] = ""
+                    self.protocol['SFTPDelivery_SFTPEmailIdSh'] = ""
                     successEmails = []
                 outEmail = self.removeEmail(successEmails, "RemoveSuccessEmail")
-                self.protocol['LFGSFTPDelivery_SFTPEmailIdSh'] = outEmail
+                self.protocol['SFTPDelivery_SFTPEmailIdSh'] = outEmail
 
         if self.jsonData["UpdateFileRename"] != "" and self.jsonData["UpdateFileRename"] != "Remove" and self.jsonData["HoldSetup"] == "False":
             if self.findConsumer >= 0:
-                self.protocol['LFGSFTPDelivery_SFTPNewName'] = self.jsonData["UpdateFileRename"]
+                self.protocol['SFTPDelivery_SFTPNewName'] = self.jsonData["UpdateFileRename"]
         elif self.jsonData["UpdateFileRename"] == "Remove" and self.jsonData["HoldSetup"] == "False":
             if self.findConsumer >= 0:
-                self.protocol['LFGSFTPDelivery_SFTPNewName'] = ""
+                self.protocol['SFTPDelivery_SFTPNewName'] = ""
 
         if self.jsonData["UpdateDir"] != "" and self.jsonData["HoldSetup"] == "False":
             if self.findConsumer >= 0:
-                self.protocol['LFGSFTPDelivery_SFTPDir'] = self.jsonData["UpdateDir"]
+                self.protocol['SFTPDelivery_SFTPDir'] = self.jsonData["UpdateDir"]
 
         if self.jsonData["UpdateSSH"] != "" and self.jsonData["HoldSetup"] == "False":
             if self.findConsumer >= 0:
-                self.protocol['LFGSFTPDelivery_SFTPProfileId'] = self.jsonData["UpdateSSH"]
+                self.protocol['SFTPDelivery_SFTPProfileId'] = self.jsonData["UpdateSSH"]
 
         if self.jsonData["HoldSetup"] == "False":
             for k, v in self.protocol.items():
