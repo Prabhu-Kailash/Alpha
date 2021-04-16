@@ -44,11 +44,11 @@ class AlphaMale:
         Routputpp = pwd + "/Builds/Output/Rework/PreProd"
         Routput = pwd + "/Builds/Output/Rework/Prod"
         if (env == "Prod"):
-            if(dataObj["MainProducer"] + ".yaml" in os.listdir("\\\\VA1PZCNAS01.us.ad.lfg.com\\sfg_preprod_build\\YAML_Current\\prod")):
-                search = open("\\\\VA1PZCNAS01.us.ad.lfg.com\\sfg_preprod_build\\YAML_Current\\prod\\%s.yaml" %
+            if(dataObj["MainProducer"] + ".yaml" in os.listdir("\\\\pathto\\sfg_preprod_build\\YAML_Current\\prod")):
+                search = open("\\\\pathto\\sfg_preprod_build\\YAML_Current\\prod\\%s.yaml" %
                               dataObj["MainProducer"], "r").read().find(dataObj["MainConsumer"])
                 if dataObj["SecondaryProducer"] != "":
-                    search1 = open("\\\\VA1PZCNAS01.us.ad.lfg.com\\sfg_preprod_build\\YAML_Current\\prod\\%s.yaml" %
+                    search1 = open("\\\\pathto\\sfg_preprod_build\\YAML_Current\\prod\\%s.yaml" %
                                 dataObj["MainProducer"], "r").read().find(dataObj["SecondaryProducer"])
                     if search1 < 0:
                         return "Secondary Producer doesn't exist under the producer YAML"
@@ -63,11 +63,11 @@ class AlphaMale:
             else:
                 return "Producer doesn't exist at Prod area, kindly validate"
         else:
-            if(dataObj["MainProducer"] + ".yaml" in os.listdir("\\\\VA1PZCNAS01.us.ad.lfg.com\\sfg_preprod_build\\YAML_Current\\nonprod")):
-                search = open("\\\\VA1PZCNAS01.us.ad.lfg.com\\sfg_preprod_build\\YAML_Current\\nonprod\\%s.yaml" %
+            if(dataObj["MainProducer"] + ".yaml" in os.listdir("\\\\pathto\\sfg_preprod_build\\YAML_Current\\nonprod")):
+                search = open("\\\\pathto\\sfg_preprod_build\\YAML_Current\\nonprod\\%s.yaml" %
                               dataObj["MainProducer"], "r").read().find(dataObj["MainConsumer"])
                 if dataObj["SecondaryProducer"] != "":
-                    search1 = open("\\\\VA1PZCNAS01.us.ad.lfg.com\\sfg_preprod_build\\YAML_Current\\nonprod\\%s.yaml" %
+                    search1 = open("\\\\pathto\\sfg_preprod_build\\YAML_Current\\nonprod\\%s.yaml" %
                                 dataObj["MainProducer"], "r").read().find(dataObj["SecondaryProducer"])
                     if search1 < 0:
                         return "Secondary Producer doesn't exist under the producer YAML"
